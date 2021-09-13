@@ -4,6 +4,11 @@
 
 ### on Windows
 
+前置安裝
+1. Net 5 SDK
+2. Net Framework 4.8
+3. [Visual Studio build tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=160)
+
 下載 agent
 
 https://vstsagentpackage.azureedge.net/agent/2.191.1/vsts-agent-win-x64-2.191.1.zip
