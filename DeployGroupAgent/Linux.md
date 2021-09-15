@@ -53,7 +53,7 @@ sudo vim config.sh
 #    exit 1
 #fi
 
-sudo ./config.sh --deploymentpool --deploymentpoolname "{集區名稱}" --acceptteeeula --agent $HOSTNAME --url http://tfs.evertrust.com.tw:8080/tfs/ --work _work --auth Negotiate --runasservice  --userName 'evertrust\tfsagent' --password '1q2w3e4r5t_';
+sudo ./config.sh --deploymentpool --deploymentpoolname "{集區名稱}" --acceptteeeula --agent $HOSTNAME --url http://{tfs domain}:8080/tfs/ --work _work --auth Negotiate --runasservice  --userName '{account}' --password '{password}';
 
 sudo ./svc.sh install
 sudo ./svc.sh start
@@ -64,7 +64,7 @@ sudo ./svc.sh start
 ```bash
 sudo ./svc.sh stop
 sudo ./svc.sh uninstall
-sudo ./config.sh remove --auth negotiate --userName 'evertrust\tfsagent' --password '1q2w3e4r5t_'
+sudo ./config.sh remove --auth negotiate --userName '{account}' --password '{password}'
 ```
 
 #### 更新環境參數
