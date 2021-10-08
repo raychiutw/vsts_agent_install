@@ -56,6 +56,8 @@ sudo yum install dotnet-sdk-2.1
 yum install gssntlmssp
 ```
 
+### ./bin/installdependencies.sh
+
 ### 下載並安裝Agent
 
 > Agent 需在以上套件都裝完後才安裝
