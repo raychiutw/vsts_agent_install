@@ -64,9 +64,9 @@ yum install gssntlmssp
 # 下載 Agent
 
 cd /data
-sudo wget https://vstsagentpackage.azureedge.net/agent/2.181.1/vsts-agent-linux-x64-2.181.1.tar.gz
+sudo wget https://vstsagentpackage.azureedge.net/agent/2.193.1/vsts-agent-linux-x64-2.193.1.tar.gz
 sudo mkdir myagent && cd myagent
-sudo tar xzf ../vsts-agent-linux-x64-2.181.1.tar.gz
+sudo tar xzf ../vsts-agent-linux-x64-2.193.1.tar.gz
 ```
 
 > 預設禁止使用 root 安裝, 修改安裝檔
