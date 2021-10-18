@@ -92,7 +92,7 @@ sudo vim ./config.sh
 
 ```bash
 # 安裝
-sudo ./config.sh --pool 'Linux' --agent '{agent名稱}' --work '_work' --url 'http://tfs.evertrust.com.tw:8080/tfs/' --auth negotiate --userName 'evertrust\tfsagent' --password '1q2w3e4r5t_'
+sudo ./config.sh --pool 'EPK-SIT' --agent 'DEV-BUD-S04' --work '_work' --url 'http://dev-tfs-p01.fetcp.net.tw:8080/tfs/' --auth negotiate --userName 'fetcs\tfsagent' --password 'P@ssw0rd'
 ```
 
 ### 啟動服務
