@@ -10,4 +10,6 @@
 
 [Windows](BuildServerAgent/Windows.md)
 
-[Linux](BuildServerAgent/Linux.md)
+[CentOS](BuildServerAgent/Centos.md)
+
+[Ubuntu](BuildServerAgent/Ubuntu.md)
