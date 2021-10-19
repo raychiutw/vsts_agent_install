@@ -54,9 +54,13 @@ sudo vim ./config.sh
 #fi
 ```
 
-> Agent 名稱建議為 : agent.{主機名稱} 
+> 安裝參數
 
-> ex: agent.srvbuildtfs7
+- `--pool` : 集區名稱
+- `--agent` : Agent 名稱
+- `--url` : TFS URL
+- `--userName` : 登入帳號
+- `--password` : 登入密碼
 
 ```bash
 # 安裝
