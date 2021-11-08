@@ -4,7 +4,7 @@
 
 ```bash
 sudo apt-get update
-sudo apt-get install wget gssntlmssp
+sudo apt-get install wget gss-ntlmssp
 ```
 
 ### 安裝 .Net Core SDK
