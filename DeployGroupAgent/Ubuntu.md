@@ -6,14 +6,20 @@
 
 ```bash
 sudo apt-get update
-sudo apt-get install wget gss-ntlmssp rpm
+sudo apt-get install wget gss-ntlmssp
 ```
 
 ### 安裝 .Net Core SDK (如果需要)
 
 ```bash
-sudo rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
-sudo yum install dotnet-sdk-5.0
+wget https://packages.microsoft.com/config/ubuntu/21.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+
+sudo apt-get update; \
+  sudo apt-get install -y apt-transport-https && \
+  sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-5.0
 ```
 
 ### 安裝 Docker
