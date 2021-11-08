@@ -10,7 +10,7 @@ sudo apt-get install wget gss-ntlmssp rpm
 ### 安裝 .Net Core SDK
 
 ```bash
-sudo rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
+sudo rpm --httpproxy 10.90.59.201:8080 -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
 sudo yum install dotnet-sdk-5.0
 ```
 
