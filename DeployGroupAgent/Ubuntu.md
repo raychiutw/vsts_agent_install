@@ -6,7 +6,7 @@
 
 ```bash
 sudo apt-get update
-sudo apt-get install wget gss-ntlmssp
+sudo apt-get install wget gss-ntlmssp rpm
 ```
 
 ### 安裝 .Net Core SDK (如果需要)
