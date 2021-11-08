@@ -9,6 +9,19 @@ sudo apt-get update
 sudo apt-get install wget gss-ntlmssp
 ```
 
+修改 wget proxy
+
+```bah
+sudo vim /etc/wgetrc
+```
+
+```bash
+https_proxy = http://10.90.59.201:8080/
+http_proxy = http://10.90.59.201:8080/
+
+use_proxy = on
+```
+
 ### 安裝 .Net Core SDK (如果需要)
 
 ```bash
