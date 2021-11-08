@@ -4,7 +4,9 @@
 
 [Windows](DeployGroupAgent/Windows.md)
 
-[Linux](DeployGroupAgent/Centos.md)
+[Centos](DeployGroupAgent/Centos.md)
+
+[Ubuntu](DeployGroupAgent/Ubuntu.md)
 
 ### Build Server Agent
 
