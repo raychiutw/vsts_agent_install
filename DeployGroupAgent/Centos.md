@@ -37,10 +37,10 @@ sudo yum install libunwind libicu gssntlmssp
 
 ```bash
 cd /data
-sudo wget https://vstsagentpackage.azureedge.net/agent/2.181.0/vsts-agent-linux-x64-2.181.0.tar.gz
+sudo wget https://vstsagentpackage.azureedge.net/agent/2.193.1/vsts-agent-linux-x64-2.193.1.tar.gz
 sudo mkdir vstsagent
 cd vstsagent
-sudo tar xzf ../vsts-agent-linux-x64-2.181.0.tar.gz
+sudo tar xzf ../vsts-agent-linux-x64-2.193.1.tar.gz
 
 # 如果是用 root 安裝, 請先註解程式判斷
 
