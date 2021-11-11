@@ -113,4 +113,16 @@ sudo ./svc.sh start
 
 #### Agent 主機差距五分鐘以上
 
+The local machine's clock may be out of sync with the server time by more than five minutes. Please sync your clock with your domain or internet time and try again.
+
 自動同步時間間, 或者手動校時
+
+
+```bash
+# 設定時區
+sudo timedatectl set-timezone Asia/Taipei
+
+# 設定時間
+sudo date -s "2021/11/11 11:24:10"
+
+```
