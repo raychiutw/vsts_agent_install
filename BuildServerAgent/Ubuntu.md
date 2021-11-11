@@ -47,9 +47,9 @@ sudo apt-get update; \
 # 下載 Agent
 
 cd /data
-sudo wget https://vstsagentpackage.azureedge.net/agent/2.191.1/vsts-agent-linux-x64-2.191.1.tar.gz
+sudo wget https://vstsagentpackage.azureedge.net/agent/2.193.1/vsts-agent-linux-x64-2.193.1.tar.gz
 sudo mkdir myagent && cd myagent
-sudo tar xzf ../vsts-agent-linux-x64-2.191.1.tar.gz
+sudo tar xzf ../vsts-agent-linux-x64-2.193.1.tar.gz
 ```
 
 > 安裝必要套件
@@ -108,3 +108,9 @@ sudo ./config.sh remove --auth negotiate --userName --userName 'fetcs\tfsagent' 
 sudo ./svc.sh stop
 sudo ./svc.sh start
 ```
+
+### 疑難排解
+
+#### Agent 主機差距五分鐘以上
+
+自動同步時間間, 或者手動校時
