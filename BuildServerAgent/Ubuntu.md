@@ -47,9 +47,9 @@ sudo apt-get update; \
 # 下載 Agent
 
 cd /data
-sudo wget https://vstsagentpackage.azureedge.net/agent/2.194.0/vsts-agent-linux-x64-2.194.0.tar.gz
+sudo wget https://vstsagentpackage.azureedge.net/agent/2.191.1/vsts-agent-linux-x64-2.191.1.tar.gz
 sudo mkdir myagent && cd myagent
-sudo tar xzf ../vsts-agent-linux-x64-2.194.0.tar.gz
+sudo tar xzf ../vsts-agent-linux-x64-2.191.1.tar.gz
 ```
 
 > 安裝必要套件
