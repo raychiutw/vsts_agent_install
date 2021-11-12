@@ -13,8 +13,8 @@ sudo yum install wget
 
 ```bash
 sudo vim /etc/wgetrc
-https_proxy = http://secproxy.evertrust.com.tw:6588/
-http_proxy = http://secproxy.evertrust.com.tw:6588/
+https_proxy = http://proxydomain:port/
+http_proxy = http://proxydomain:port/
 
 use_proxy = on
 ```
@@ -53,7 +53,7 @@ sudo vim config.sh
 #    exit 1
 #fi
 
-sudo ./config.sh --deploymentpool --deploymentpoolname "{集區名稱}" --acceptteeeula --agent $HOSTNAME --url http://{tfs domain}:8080/tfs/ --work _work --auth Negotiate --runasservice  --userName '{account}' --password '{password}';
+sudo ./config.sh --deploymentpool --deploymentpoolname "{部屬集區名稱}" --acceptteeeula --agent $HOSTNAME --url 'tfs url' --work _work --auth Negotiate --runasservice  --userName '{account}' --password '{password}';
 
 sudo ./svc.sh install
 sudo ./svc.sh start
