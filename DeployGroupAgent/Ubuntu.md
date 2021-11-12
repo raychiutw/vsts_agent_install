@@ -16,8 +16,8 @@ sudo vim /etc/wgetrc
 ```
 
 ```bash
-https_proxy = http://10.90.59.201:8080/
-http_proxy = http://10.90.59.201:8080/
+https_proxy = http://proxydomain:port/
+http_proxy = http://proxydomain:port/
 
 use_proxy = on
 ```
@@ -78,7 +78,7 @@ sudo vim ./config.sh
 ```
 
 ```
-sudo ./config.sh --deploymentpool --deploymentpoolname "{集區名稱}" --acceptteeeula --agent $HOSTNAME --url http://{tfs domain}:8080/tfs/ --work _work --auth Negotiate --runasservice  --userName '{account}' --password '{password}';
+sudo ./config.sh --deploymentpool --deploymentpoolname "{部署集區名稱}" --acceptteeeula --agent $HOSTNAME --url 'http://{tfs url}' --work _work --auth Negotiate --runasservice  --userName '{account}' --password '{password}';
 
 sudo ./svc.sh install
 sudo ./svc.sh start
