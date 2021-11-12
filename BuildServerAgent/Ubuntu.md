@@ -14,8 +14,8 @@ sudo vim /etc/wgetrc
 ```
 
 ```bash
-https_proxy = http://10.90.59.201:8080/
-http_proxy = http://10.90.59.201:8080/
+https_proxy = http://proxydomain:port/
+http_proxy = http://proxydomain:port/
 
 use_proxy = on
 ```
@@ -83,7 +83,7 @@ sudo vim ./config.sh
 
 ```bash
 # 安裝
-sudo ./config.sh --pool 'EPK-SIT' --agent 'DEV-BUD-S04' --work '_work' --url 'http://dev-tfs-p01.fetcp.net.tw:8080/tfs/' --auth negotiate --userName 'fetcs\tfsagent' --password 'P@ssw0rd'
+sudo ./config.sh --pool 'EPK-SIT' --agent '{agent name}' --work '_work' --url '{tfs url}' --auth negotiate --userName '{account}' --password '{password}'
 ```
 
 ### 啟動服務
@@ -98,7 +98,7 @@ sudo ./svc.sh start
 ```bash
 sudo ./svc.sh stop
 sudo ./svc.sh uninstall
-sudo ./config.sh remove --auth negotiate --userName --userName 'fetcs\tfsagent' --password 'P@ssw0rd'
+sudo ./config.sh remove --auth negotiate --userName --userName '{account}' --password '{password}'
 ```
 
 ### 更新環境參數
