@@ -21,11 +21,11 @@ https://vstsagentpackage.azureedge.net/agent/2.193.1/vsts-agent-win-x64-2.193.1.
 修改 agent name `DEV-BUD-U01`
 
 ```powershell
-.\config.cmd --pool 'EPK-UAT' --agent 'DEV-BUD-U01' --runasservice --work '_work' --url 'http://dev-tfs-p01.fetcp.net.tw:8080/tfs/' --auth negotiate --userName 'fetcu\tfsagent' --password 'P@ssw0rd'  --windowsLogonAccount 'fetcu\tfsagent' --windowsLogonPassword 'P@ssw0rd'
+.\config.cmd --pool 'EPK-UAT' --agent '{agent name}' --runasservice --work '_work' --url '{tfs url}' --auth negotiate --userName '{account}' --password '{password}'  --windowsLogonAccount '{account}' --windowsLogonPassword '{password}'
 ```
 
 移除 agent
 
 ```powershell
-.\config.cmd remove --auth negotiate --userName 'fetcu\tfsagent' --password 'P@ssw0rd'
+.\config.cmd remove --auth negotiate --userName 'account' --password 'password'
 ```
