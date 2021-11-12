@@ -16,8 +16,8 @@ sudo vim /etc/wgetrc
 ```
 
 ```bash
-https_proxy = http://proxydomain.com.tw:port/
-http_proxy = http://proxydomain.com.tw:port/
+https_proxy = http://proxydomain:port/
+http_proxy = http://proxydomain:port/
 
 use_proxy = on
 ```
