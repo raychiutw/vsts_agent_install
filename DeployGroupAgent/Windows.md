@@ -2,11 +2,9 @@
 
 ### on Windows
 
-請使用 `EVERTRUST\COMUser` 登入
-
 #### 加入帳號
 
-請將 `EVERTRUST\TFSAgent` 加入管理者群組
+請將 `執行服務帳號` 加入管理者群組
 
 #### 安裝 agent
 
@@ -35,13 +33,13 @@ if($DefaultProxy -and (-not $DefaultProxy.IsBypassed($Uri))){$WebClient.Proxy= N
 $WebClient.DownloadFile($Uri, $agentZip);
 Add-Type -AssemblyName System.IO.Compression.FileSystem;
 [System.IO.Compression.ZipFile]::ExtractToDirectory( $agentZip, "$PWD");
-.\config.cmd --deploymentpool --deploymentpoolname $deployGroupName --agent $env:COMPUTERNAME --runasservice --work '_work' --url 'http://tfs.evertrust.com.tw:8080/tfs/' --auth negotiate --userName 'evertrust\tfsagent' --password '1q2w3e4r5t_'  --windowsLogonAccount 'evertrust\tfsagent' --windowsLogonPassword '1q2w3e4r5t_'
+.\config.cmd --deploymentpool --deploymentpoolname $deployGroupName --agent $env:COMPUTERNAME --runasservice --work '_work' --url '{tfs url}' --auth negotiate --userName '{account}' --password '{password}'  --windowsLogonAccount '{account}' --windowsLogonPassword '{password}'
 ```
 
 移除 agent
 
 ```powershell
-c:\vstsagent\a1\config.cmd remove --auth negotiate --userName 'evertrust\tfsagent' --password '1q2w3e4r5t_'
+c:\vstsagent\a1\config.cmd remove --auth negotiate --userName '{account}' --password '{password}'
 
 # 刪除 a1 資料夾 (也可用檔案總管刪除)
 Remove-Item –path c:\vstsagent\a1 –recurse -force
@@ -54,6 +52,6 @@ Remove-Item –path c:\vstsagent\a1 –recurse -force
 ```powershell
 cd c:\vstsagent\a1
 
-.\config.cmd remove --auth negotiate --userName 'evertrust\tfsagent' --password '1q2w3e4r5t_'
-.\config.cmd --deploymentpool --deploymentpoolname "{集區名稱}" --agent $env:COMPUTERNAME --runasservice --work '_work' --url 'http://tfs.evertrust.com.tw:8080/tfs/' --auth negotiate --userName 'evertrust\tfsagent' --password '1q2w3e4r5t_'  --windowsLogonAccount 'evertrust\tfsagent' --windowsLogonPassword '1q2w3e4r5t_';
+.\config.cmd remove --auth negotiate --userName '{account}' --password '{password}'
+.\config.cmd --deploymentpool --deploymentpoolname "{部屬集區名稱}" --agent $env:COMPUTERNAME --runasservice --work '_work' --url '{tfs url}' --auth negotiate --userName {account}' --password '{password}'  --windowsLogonAccount '{account}' --windowsLogonPassword '{password}';
 ```
