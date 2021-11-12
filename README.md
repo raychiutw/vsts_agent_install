@@ -32,6 +32,8 @@ Linux / Mac 路徑
 
 ```xml
   <config>
-    <add key="http_proxy" value="http://10.90.59.201:8080" />
+    <add key="http_proxy" value="http://proxtdomain:port" />
+    <add key="http_proxy.user" value="accout" />
+    <add key="http_proxy.password" value="password" />
   </config>
 ```
