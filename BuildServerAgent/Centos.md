@@ -16,8 +16,8 @@ sudo vim /etc/wgetrc
 ```
 
 ```bash
-https_proxy = http://secproxy.evertrust.com.tw:6588/
-http_proxy = http://secproxy.evertrust.com.tw:6588/
+https_proxy = http://proxydomain.com.tw:port/
+http_proxy = http://proxydomain.com.tw:port/
 
 use_proxy = on
 ```
@@ -32,10 +32,8 @@ sudo yum install libunwind libicu
 ### 安裝 .Net Core SDK
 
 ```bash
-sudo rpm --httpproxy secproxy.evertrust.com.tw:6588 -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
-sudo yum install dotnet-sdk-3.1
-sudo yum install dotnet-sdk-2.2
-sudo yum install dotnet-sdk-2.1
+sudo rpm --httpproxy proxydomain.com.tw:port -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rpm
+sudo yum install dotnet-sdk-6.0
 ```
 
 [.NET Core on CentOS 7](https://docs.microsoft.com/zh-tw/dotnet/core/install/linux-centos#centos-7-)
@@ -94,7 +92,7 @@ sudo vim ./config.sh
 
 ```bash
 # 安裝
-sudo ./config.sh --pool 'EPK-SIT' --agent 'DEV-BUD-S04' --work '_work' --url 'http://dev-tfs-p01.fetcp.net.tw:8080/tfs/' --auth negotiate --userName 'fetcs\tfsagent' --password 'P@ssw0rd'
+sudo ./config.sh --pool '{pool name}' --agent '{agent name}' --work '_work' --url '{tfs url}' --auth negotiate --userName '{account}' --password '{password}'
 ```
 
 ### 啟動服務
@@ -109,7 +107,7 @@ sudo ./svc.sh start
 ```bash
 sudo ./svc.sh stop
 sudo ./svc.sh uninstall
-sudo ./config.sh remove --auth negotiate --userName 'evertrust\tfsagent' --password '1q2w3e4r5t_'
+sudo ./config.sh remove --auth negotiate --userName '{account}' --password '{password}'
 ```
 
 ### 更新環境參數
