@@ -14,7 +14,7 @@
 
 ```powershell
 $deployGroupName="{集區名稱}"
-$version="2.193.1";
+$version="2.206.1";
 $ErrorActionPreference="Stop";
 
 If($PSVersionTable.PSVersion -lt (New-Object System.Version("3.0"))){ throw "指令碼 (3.0) 需要的 Windows PowerShell 最低版本，與目前正在執行的 Windows PowerShell 版本不符。" };
