@@ -11,7 +11,7 @@
 
 下載 agent
 
-https://vstsagentpackage.azureedge.net/agent/2.193.1/vsts-agent-win-x64-2.193.1.zip
+https://vstsagentpackage.azureedge.net/agent/2.193.1/vsts-agent-win-x64-2.206.1.zip
 
 解壓縮到 C:\vstsagent\
 
